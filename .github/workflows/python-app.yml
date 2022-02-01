@@ -6,6 +6,7 @@ name: sending-email
 defaults:
   run:
     shell: bash
+    working-directory: ./sending-email
    
 
 on:
