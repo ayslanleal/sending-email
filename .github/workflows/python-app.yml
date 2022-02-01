@@ -6,13 +6,14 @@ name: sending-email
 defaults:
   run:
     shell: bash
+    working-directory: ./sending_email
    
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
