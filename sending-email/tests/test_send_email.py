@@ -1,6 +1,6 @@
 class Sending:
     pass
 
-def send_email():
+def test_send_email():
     sending = Sending()
     assert sending is not None
