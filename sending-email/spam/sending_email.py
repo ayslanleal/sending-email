@@ -1,3 +1,4 @@
 
 class Sending:
-    pass
+    def sendind_sms(self):
+        return 1

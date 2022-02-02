@@ -1,4 +1,5 @@
-from spam.sending_email import Sending
+class Sending:
+    pass
 
 def send_email():
     sending = Sending()
