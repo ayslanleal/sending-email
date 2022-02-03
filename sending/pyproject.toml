@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "sending-email"
+version = "0.1.0"
+description = ""
+authors = ["ayslanleal <ayslanleal15@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest-cov = "^3.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

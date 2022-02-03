@@ -1,0 +1,10 @@
+{
+    "python.analysis.extraPaths": [
+        "./sending-email/spam"
+    ],
+    "python.testing.pytestArgs": [
+        "sending-email"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
