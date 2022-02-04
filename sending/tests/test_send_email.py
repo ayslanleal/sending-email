@@ -1,11 +1,5 @@
-"""import sys
-from pathlib import Path
-sys.path.append(str(Path('.').absolute().parent))
-"""
-
-
 import pytest
-from sending.spam import Sending
+from sending.spam import Sending, InvalidEmail
 
 def test_create_send():
     sending = Sending()
@@ -23,3 +17,14 @@ def test_remetente(receive):
     )
 
     assert receive in resultado
+
+@pytest.mark.parametrize('receive', ["","ayskanleal15gmail.com"] )
+def test_remetente_invalid(receive):
+    sending = Sending()
+    with pytest.raises(InvalidEmail):
+        sending.send(
+            "neymarjr@gmail.com",
+            receive,
+            "Notas fiscais",
+            "Notas fiscais das compras a pgar",
+        )
