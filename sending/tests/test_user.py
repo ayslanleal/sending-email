@@ -1,10 +1,8 @@
 import imp
-from sending.spam import Connect, Session
+from sending.spam import Connect, Session, User
 
-class User:
-    def __init__(self, name):
-        self.name = name
-        self.id = None
+
+
 
 
 def test_save_user():
@@ -17,7 +15,7 @@ def test_save_user():
     session.close()
     conection.close()
 
-"""
+
 def test_show_users():
     conection = Connect()
     session = conection.init_session()
@@ -30,7 +28,6 @@ def test_show_users():
     session.close()
     conection.close()
 
-"""
 
 
 
