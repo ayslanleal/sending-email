@@ -1,14 +1,14 @@
 class Session:
     cont = 0
-    user=[]
+    users= []
 
     def save(self, user):
         Session.cont += 1
         user.id = Session.cont
-        self.user.append(user)
+        self.users.append(user)
     
     def show(self):
-        return self.user
+        return self.users
 
     def close(self):
         pass
@@ -27,8 +27,8 @@ class Connect:
 
 
 class User:
-    def __init__(self, nome):
-        self.nome = nome
+    def __init__(self, name):
+        self.name = name
         self.id = None
 
 
@@ -43,14 +43,21 @@ def test_save_user():
     session.close()
     conection.close()
 
+"""
 def test_show_users():
     conection = Connect()
     session = conection.init_session()
-    users = [User(nome="David"), User(nome="Leal")]
+    users = [User(name="David"), User(name="Leal")]
     for user in users:
         session.save(user)
+
     assert users == session.show()
     session.roll_back()
     session.close()
     conection.close()
+
+"""
+
+
+
 
