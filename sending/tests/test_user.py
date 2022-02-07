@@ -1,36 +1,10 @@
-class Session:
-    cont = 0
-    users= []
-
-    def save(self, user):
-        Session.cont += 1
-        user.id = Session.cont
-        self.users.append(user)
-    
-    def show(self):
-        return self.users
-
-    def close(self):
-        pass
-
-    def roll_back(self):
-        pass
-    
-    
-
-class Connect:
-    def init_session(self):
-        return Session()
-
-    def close(self):
-        pass
-
+import imp
+from sending.spam import Connect, Session
 
 class User:
     def __init__(self, name):
         self.name = name
         self.id = None
-
 
 
 def test_save_user():
