@@ -7,6 +7,10 @@ class SendingSpam:
         self.sending = sending
 
     def send_emails(self, to, title, body):
-        self.to = to
-        self.title = title
-        self.body = body
+        for user in self.session.show():
+            self.sending.send(
+                to,
+                title,
+                body
+            )
+
