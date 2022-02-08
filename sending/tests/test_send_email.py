@@ -6,6 +6,7 @@ def test_create_send():
     assert sending is not None
 
 
+
 @pytest.mark.parametrize('receive', ["luciano@gmail.com","ayskanleal15@gmail.com"] )
 def test_remetente(receive):
     sending = Sending()
